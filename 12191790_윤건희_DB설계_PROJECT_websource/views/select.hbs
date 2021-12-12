@@ -1,0 +1,78 @@
+{{!-- <table>
+    <tr> //행
+        <td> //열
+
+        </td>
+    </tr>
+</table> --}}
+{{!-- #each -> 반복을 하겠다. 데이터 개수만큼 --}}
+
+
+<h1>{{title1}}</h1>
+
+<table>
+    <tr>
+        <td>Airport_code</td>
+        <td>Name</td>
+    </tr>
+    {{!-- department의 개수만큼 반복 --}}
+    {{#each airport_na}}
+    <tr>
+        <td>{{Airport_code}}</td>
+        <td>{{Name}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{title1}}</h1>
+
+<table>
+    <tr>
+        <td>Airport_code</td>
+        <td>City</td>
+        <td>Country</td>
+    </tr>
+    {{!-- department의 개수만큼 반복 --}}
+    {{#each airport_add}}
+    <tr>
+        <td>{{Airport_code}}</td>
+        <td>{{City}}</td>
+        <td>{{Country}}</td>
+    </tr>
+    {{/each}}
+</table>
+<h1>{{title2}}</h1>
+
+<table>
+    <tr>
+        <td>flight_number</td>
+        <td>airline</td>
+    </tr>
+    {{!-- department의 개수만큼 반복 --}}
+    {{#each fli}}
+    <tr>
+        <td>{{Flight_number}}</td>
+        <td>{{Airline}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+<h1>{{title3}}</h1>
+
+<table>
+    <tr>
+        <td>Airplane_id</td>
+        <td>Total_number_of_seats</td>
+        <td>Airplane_type</td>
+    </tr>
+    {{!-- department의 개수만큼 반복 --}}
+    {{#each airpl}}
+    <tr>
+        <td>{{Airplane_id}}</td>
+        <td>{{Total_number_of_seats}}</td>
+        <td>{{Airplane_type}}</td>
+    </tr>
+    {{/each}}
+</table>
+
+

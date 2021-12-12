@@ -1,0 +1,32 @@
+<h1>{{ title }}</h1>
+{{!-- 테이블 형태로 정보를 보여줌 --}}
+<table>
+<tr>
+<td>Airplane_id</td>
+<td>total_number_of_seats</td>
+<td>Airplane_type</td>
+</tr>
+{{!-- book 테이블에 있는 튜플의 개수만큼 반복 --}}
+{{#each plane}}
+{{!-- post 형식의 form --}}
+<form method="post">
+<tr>
+<td>{{Airplane_id}}</td>
+<td>{{Total_number_of_seats}}</td>
+<td>{{Airplane_type}}</td>
+<td style="border: none; margin-left: 10px;">
+{{!-- 삭제버튼 --}}
+<button
+style="margin-left: 10px;"
+name='delBtn'
+type="submit"
+value="{{Airplane_id}}"
+formaction="/delete/airplane"
+>
+삭제
+</button>
+</td>
+</tr>
+</form>
+{{/each}}
+</table>

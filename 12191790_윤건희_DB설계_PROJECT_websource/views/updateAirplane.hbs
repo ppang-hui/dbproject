@@ -1,0 +1,22 @@
+
+<h1>{{title}}</h1>
+
+<table>
+    <tr>
+        <td>Airplane_id</td>
+        <td>Total_number_of_seats</td>
+        <td>Airplane_type</td>
+    </tr>
+    {{!-- plan_Res의 개수만큼 반복 --}}
+    {{#each plan_res}}
+    <form method = "post">
+    <tr>
+        <td>{{Airplane_id}}</td>
+        <td>{{Total_number_of_seats}}</td>
+        <td><input type = "text" name = "airplane_type" placeholder="{{Airplane_type}}"></td>
+        <td><input type = "submit" value = "수정" formaction="/update/airplane"></td>
+    </tr>
+    </form>
+    {{/each}}
+    
+</table>

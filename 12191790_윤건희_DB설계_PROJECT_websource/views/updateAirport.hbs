@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<table>
+    <tr>
+        <td>Airport_code</td>
+        <td>Name</td>
+    </tr>
+    {{!-- plan_Res의 개수만큼 반복 --}}
+    {{#each port_res}}
+    <form method = "post">
+    <tr>
+        <td>{{Airport_code}}</td>
+        <td><input type = "text" name = "name" placeholder="{{Name}}"></td>
+        <td><input type = "submit" value = "수정" formaction="/update/airport"></td>
+    </tr>
+    </form>
+    {{/each}}
+    
+</table>
